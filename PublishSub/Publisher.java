@@ -18,12 +18,12 @@ public class Publisher {
         ConnectionFactory factory = new ConnectionFactory();
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
-        Gson gson = new Gson();
+        //Gson gson = new Gson();
 
 
         //channel.queueDeclare("Fodbold", false, false, false, null);
         //channel.queueDeclare("Tennis", false, false, false, null);
-        channel.queueDeclare("Bowling", false, false, false, null);
+        //channel.queueDeclare("Bowling", false, false, false, null);
         channel.exchangeDeclare("Tennis", "fanout");
         channel.exchangeDeclare("Fodbold", "fanout");
 
